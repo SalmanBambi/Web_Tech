@@ -1,0 +1,235 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Greedy box concept / Box sizing requirement */
+}
+
+body {
+    font-family: 'Noto Sans', sans-serif;
+    color: #333;
+    background-color: #f4f7f6;
+    line-height: 1.6;
+}
+
+h1, h2, h3 {
+    font-family: 'Montserrat', sans-serif;
+    color: #222;
+    margin-bottom: 15px; /* Margin requirement */
+}
+
+
+#main-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    background-color: #ffffff;
+    border-bottom: none; /* Removing border if not needed */
+}
+
+/* Styling the Logo Text */
+.logo a {
+    text-decoration: none;
+}
+
+.logo h2 {
+    font-size: 24px;
+    font-weight: 700;
+    color: #1a1a1a;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* Flex container for the links */
+.nav-links {
+    display: flex;
+    gap: 30px;
+}
+
+/* Styling the Links */
+.nav-links a {
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #333333;
+    font-family: 'Noto Sans', sans-serif;
+    transition: color 0.3s ease;
+}
+
+/* Active Link and Hover State */
+.nav-links a:hover, 
+.nav-links a.active {
+    color: #ff5722; /* The orange color seen in the picture */
+}
+
+/*BG IMG*/
+.media-hero {
+    width: 100%; /* Width requirement */
+    height: 400px; /* Height requirement */
+    background-image: url('https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?auto=format&fit=crop&q=80&w=1600'); /* Background image requirement */
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-overlay {
+    background-color: rgba(180, 180, 171, 0.6);
+    padding: 40px;
+    text-align: center;
+    color: white;
+    border-radius: 10px;
+}
+.sl{
+    color: #ffffff;
+    
+}
+/*  FLOAT REQUIREMENT */
+.about-info-section {
+    padding: 60px 50px;
+    background-color: #fff;
+}
+
+.info-container {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.float-img {
+    float: left; /* Float requirement */
+    width: 300px;
+    margin-right: 30px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.clearfix::after {
+    content: "";
+    display: table;
+    clear: both; /* Clears the float */
+}
+
+ul.gear-list, ol.steps-list {
+    margin-left: 40px;
+    margin-bottom: 20px;
+}
+
+/*
+   OVERFLOW REQUIREMENT (For Data Table)
+ */
+.table-section {
+    padding: 60px 50px;
+    text-align: center;
+}
+
+.table-responsive {
+    max-width: 900px;
+    margin: 0 auto;
+    overflow-x: auto; /* Overflow requirement - adds scrollbar on small screens */
+    border: 1px solid #ccc;
+    background-color: #fff;
+}
+
+.pricing-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.pricing-table th, .pricing-table td {
+    padding: 15px;
+    border-bottom: 1px solid #ddd;
+    text-align: left;
+}
+
+.pricing-table th {
+    background-color: #222;
+    color: #fff;
+}
+
+/* 
+   POSITION & CSS GRID REQUIREMENT
+    */
+.media-gallery-section {
+    padding: 60px 50px;
+    background-color: #fff;
+    text-align: center;
+}
+
+.media-grid {
+    display: grid; /* Display grid requirement */
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 40px;
+    max-width: 1000px;
+    margin: 0 auto;
+    margin-top: 30px;
+}
+
+.media-card {
+    background: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+.relative-box {
+    position: relative; /* Position requirement (parent) */
+}
+
+.badge {
+    position: absolute; /* Position requirement (child) */
+    top: -15px;
+    right: -15px;
+    background-color: #ff5722;
+    color: white;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: bold;
+    z-index: 10;
+}
+
+footer {
+    background-color: #222;
+    color: #fff;
+    text-align: center;
+    padding: 30px;
+    margin-top: 40px;
+}
+
+
+/* 
+ (Media Queries)
+*/
+@media (max-width: 768px) {
+    /* Header & Navigation Stack */
+    #main-header {
+        flex-direction: column;
+        padding: 15px;
+        gap: 15px;
+    }
+    .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    /* Page 1: Hero Section Text Adjustment */
+    .hero-content h1 {
+        font-size: 35px;
+    }
+    
+    /* Page 2: Float Image Full Width */
+    .float-img {
+        float: none;
+        width: 100%;
+        margin-right: 0;
+    }
+
+    /* Page 2: Media Grid Adjustment */
+    .media-grid {
+        grid-template-columns: 1fr; /* Ek column me sab fit ho jayega */
+    }
+}

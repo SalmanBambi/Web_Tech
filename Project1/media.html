@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Outdoor Adventure - About</title>
+    <link rel="stylesheet" href="media.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Noto+Sans:wght@400;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- Main Navigation Bar -->
+    <header id="main-header">
+        <div class="logo">
+            <a href="index.html">
+                <h2>Outdoor Adventure</h2>
+            </a>
+        </div>
+        <nav class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="media.html" class="active">About</a>
+            <a href="services.html">Services</a>
+            <a href="portfolio.html">Projects</a>
+            <a href="register.html">Contact</a>
+        </nav>
+    </header>
+
+    <!-- Hero Section with Background Image -->
+    <section class="media-hero">
+        <div class="hero-overlay">
+            <h1>Information & Media</h1>
+            <p class="">Everything you need to know before your next adventure</p>
+        </div>
+    </section>
+
+    <!-- Float & Position Section (CSS Requirement) -->
+    <section class="about-info-section">
+        <div class="info-container">
+            <!-- Floating Image -->
+            <img src="https://images.unsplash.com/photo-1501554728187-ce583db33af7?auto=format&fit=crop&q=80&w=400"
+                alt="Hiker with map" class="float-img">
+
+            <h2>Essential Preparation</h2>
+            <p>To make the most out of your hiking experience, preparation is key. Here at Outdoor Adventure, we believe
+                in equipping our explorers with the best knowledge. Our guides have decades of experience in the wild.
+            </p>
+
+            <!-- Unordered List -->
+            <h3>Things to Bring (Unordered List)</h3>
+            <ul class="gear-list">
+                <li>Sturdy hiking boots</li>
+                <li>Weather-appropriate clothing</li>
+                <li>Reusable water bottle and snacks</li>
+                <li>First-aid kit and map</li>
+            </ul>
+
+            <!-- Ordered List -->
+            <h3>How to Book a Tour (Ordered List)</h3>
+            <ol class="steps-list">
+                <li>Check the tour schedule below.</li>
+                <li>Select your preferred destination.</li>
+                <li>Fill out the registration form on the Contact page.</li>
+                <li>Receive your confirmation email and get ready!</li>
+            </ol>
+
+            <!-- Clearing float using CSS -->
+            <div class="clearfix"></div>
+        </div>
+    </section>
+
+    <!-- Data Table Section -->
+    <section class="table-section">
+        <h2>Tour Pricing & Schedule (Data Table)</h2>
+        <!-- Overflow applied to this wrapper for responsive tables -->
+        <div class="table-responsive">
+            <table class="pricing-table">
+                <thead>
+                    <tr>
+                        <th>Destination</th>
+                        <th>Duration</th>
+                        <th>Difficulty</th>
+                        <th>Price (USD)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Everest Base Camp</td>
+                        <td>14 Days</td>
+                        <td>Hard</td>
+                        <td>$1,200</td>
+                    </tr>
+                    <tr>
+                        <td>Walking Holidays</td>
+                        <td>3 Days</td>
+                        <td>Easy</td>
+                        <td>$350</td>
+                    </tr>
+                    <tr>
+                        <td>Mountain Lake Retreat</td>
+                        <td>5 Days</td>
+                        <td>Moderate</td>
+                        <td>$550</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <!-- Video & Audio Media Gallery (CSS Grid) -->
+    <section class="media-gallery-section">
+        <h2>Experience The Adventure (Video & Audio)</h2>
+
+        <div class="media-grid">
+            <!-- Video Container with Position Absolute Badge -->
+            <div class="media-card relative-box">
+                <span class="badge">Featured Video</span>
+                <h3>Promo Video</h3>
+                <video width="100%" height="auto" controls>
+                    <source src="outdoor.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+
+            <!-- Audio Container -->
+            <div class="media-card">
+                <h3>Nature Sounds (Audio)</h3>
+                <p>Listen to the calming sounds of the wild.</p>
+                <br>
+                <audio controls>
+                    <!-- Updated working audio link -->
+                    <source src="nature.wav"
+                        type="audio/mpeg">
+                    Your browser does not support the audio element.
+                </audio>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>Copyright &copy; 2026 Outdoor Adventure. All rights reserved.</p>
+    </footer>
+
+</body>
+
+</html>
