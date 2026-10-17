@@ -25,34 +25,51 @@ a {
 /* =========================================
    NAVIGATION (Flexbox Layout)
    ========================================= */
+/* =========================================
+   NAVIGATION (Consistent for all pages)
+   ========================================= */
 #main-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 20px 50px;
     background-color: #ffffff;
-    border-bottom: 1px solid #eaeaea; /* Border requirement */
+    border-bottom: none; /* Removing border if not needed */
+}
+
+/* Styling the Logo Text */
+.logo a {
+    text-decoration: none;
 }
 
 .logo h2 {
     font-size: 24px;
     font-weight: 700;
+    color: #1a1a1a;
+    font-family: 'Montserrat', sans-serif;
 }
 
+/* Flex container for the links */
 .nav-links {
     display: flex;
     gap: 30px;
 }
 
+/* Styling the Links */
 .nav-links a {
     font-size: 14px;
     font-weight: 700;
     text-transform: uppercase;
+    text-decoration: none;
+    color: #333333;
+    font-family: 'Noto Sans', sans-serif;
     transition: color 0.3s ease;
 }
 
-.nav-links a:hover, .nav-links a.active {
-    color: #ff5722;
+/* Active Link and Hover State */
+.nav-links a:hover, 
+.nav-links a.active {
+    color: #ff5722; /* The orange color seen in the picture */
 }
 
 /* =========================================
@@ -210,4 +227,39 @@ footer {
 .footer-copyright p {
     font-size: 14px;
     color: #999;
+}
+
+
+/* 
+ (Media Queries)
+*/
+@media (max-width: 768px) {
+    /* Header & Navigation Stack */
+    #main-header {
+        flex-direction: column;
+        padding: 15px;
+        gap: 15px;
+    }
+    .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    /* Page 1: Hero Section Text Adjustment */
+    .hero-content h1 {
+        font-size: 35px;
+    }
+    
+    /* Page 2: Float Image Full Width */
+    .float-img {
+        float: none;
+        width: 100%;
+        margin-right: 0;
+    }
+
+    /* Page 2: Media Grid Adjustment */
+    .media-grid {
+        grid-template-columns: 1fr; /* Ek column me sab fit ho jayega */
+    }
 }
