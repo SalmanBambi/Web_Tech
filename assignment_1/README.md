@@ -22,7 +22,7 @@ I have chosen **Route A** to recreate a WordPress demo theme in static HTML, CSS
 | :--- | :--- | :--- |
 | Gemini | "Give me 5 easy website replica ideas to get teacher approval." | Decided to go with the 'Outdoor Adventure' theme and planned the page distribution. |
 | Gemini | "Which Code With Harry videos should I watch for Assignment 1 and the Box Model?" | Followed the provided playlist guide to learn HTML tags, Forms, CSS Box Model, Grid, and Flexbox concepts before coding. |
-| Gemini | "Generate an optimized HTML and CSS layout for the Outdoor Adventure replica based on Assignment 1 requirements." | I reviewed the provided code structure, updated the placeholder image links to working Unsplash links, corrected the gibberish text, and manually typed the optimized CSS code. I also ensured that I understood every selector and layout property (Flexbox/Grid) for the Viva. |
+| w3schools |  | I used w3schools to better understand concepts like flexbox and grid. |
 
 ---
 
